@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta nombre="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculador de Promedio</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <h1>Calculador de Promedio</h1>
+      <br /><br /><br />
+
+      <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" id="cerrarModal">&times;</span>
+
+          <div class="input-container">
+            <input type="text" id="nombreInput" placeholder="Nombre" />
+            <input type="number" id="nota1" placeholder="Nota 1" />
+
+            <input type="number" id="nota2" placeholder="Nota 2" />
+            <input type="number" id="nota3" placeholder="Nota 3" />
+            <button id="addBtn">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="editarModal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" id="cerrarEditarModal">&times;</span>
+          <h2>Editar Estudiante</h2>
+          <input type="hidden" id="editarIndex" value="" />
+          <input type="text" id="editarNombre" placeholder="Nombre" />
+          <input type="text" id="editarnota1" placeholder="nota 1" />
+          <input type="text" id="editarnota2" placeholder="nota 2" />
+
+          <input type="text" id="editarnota3" placeholder="nota 3" />
+          <button id="guardarEdicionBtn">Guardar</button>
+        </div>
+      </div>
+
+      <div class="output-container">
+        <table class="tabla-centrada">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+
+              <th>Nota 1</th>
+
+              <th>Nota 2</th>
+
+              <th>Nota 3</th>
+
+              <th>Promedio</th>
+
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody id="studentList"></tbody>
+        </table>
+        <br />
+        <br />
+      </div>
+
+      <div class="container">
+        <button id="abrirModal">Agregar nuevo</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
